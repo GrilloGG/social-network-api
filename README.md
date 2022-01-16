@@ -2,14 +2,12 @@
 
 ## Table Of Contents
 
-- [Social Network API](#social-network-api)
-  - [Table Of Contents](#table-of-contents)
-  - [Description](#description)
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Test](#test)
-  - [Links](#links)
-  - [Questions](#questions)
+ - [Description](#description)
+ - [Installation](#installation)
+ - [Usage](#usage)
+- [Test](#test)
+ - [Links](#links)
+ - [Questions](#questions)
 
 ## Description
 
