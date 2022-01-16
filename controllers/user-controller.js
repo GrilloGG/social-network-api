@@ -1,7 +1,7 @@
 const { User } = require("../models");
 
 const userController = {
-  // GET /api/users
+  // GET all users
   getAllUsers(req, res) {
     User.find({})
       .populate({
@@ -16,7 +16,7 @@ const userController = {
       });
   },
 
-  // GET /api/users/:id
+  // GET users by ID
   getUserById({ params }, res) {
     User.findOne({ _id: params.id })
       .populate({
@@ -35,14 +35,14 @@ const userController = {
       });
   },
 
-  // POST /api/users
+  // Create user
   createUser({ body }, res) {
     User.create(body)
       .then(dbUserData => res.json(dbUserData))
       .catch(err => res.status(400).json(err));
   },
 
-  // PUT /api/users/:id
+  // Update user
   updateUser({ params, body }, res) {
     User.findOneAndUpdate({ _id: params.id }, body, {
       new: true,
@@ -58,7 +58,7 @@ const userController = {
       .catch(err => res.json(err));
   },
 
-  // DELETE /api/users/:id
+  // Delete user
   deleteUser({ params }, res) {
     User.findOneAndDelete({ _id: params.id })
       .then(dbUserData => {

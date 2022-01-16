@@ -59,13 +59,10 @@ const ThoughtSchema = new Schema(
   }
 );
 
-// Virtual property reactionCount
 ThoughtSchema.virtual("reactionCount").get(function () {
   return this.reactions.length;
 });
 
-// Create Thought model with Schema
 const Thought = model("Thought", ThoughtSchema);
 
-// Exports Thought model
 module.exports = Thought;
